@@ -4,18 +4,18 @@ const jwt = require('jsonwebtoken');
 exports.register = async (req,res) =>{
   try {
     const {username,password} = req.body;
-    const user = new user({username,password});
+    const user = new User({username,password});
     await user.save();
     res.status(201).json({message: 'User registered successfully'});
   } catch (error) {
-    res.status(400).json({error: 'err.message'});
+    res.status(400).json({error: error.message});
   }
 };
 
 exports.login = async (req,res) =>{
   try{
     const {username,password} = req.body;
-    const user = await user.findOne({username,password});
+    const user = await User.findOne({username});
     if(!user || !(await user.comparePassword(password))){
       res.status(401).json({error: 'Invalid username or password'})
     }

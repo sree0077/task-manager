@@ -34,6 +34,13 @@ function Login(){
         <input name="password" type="password" onChange={handleChange} placeholder="Password" className="border p-2 mb-2 w-full"/>
         {error && <p className="text-red-500">{error}</p>}
         <button type="submit" className="bg-blue-500 rounded text-white p-2 w-full hover:bg-blue-600">Login</button>
+         <button 
+        type="button" 
+        onClick={() => navigate('/register')} 
+        className="bg-gray-500 rounded text-white p-2 w-full hover:bg-gray-600 mt-2"
+      >
+        Register
+      </button>
       </form>
     </div>
    );

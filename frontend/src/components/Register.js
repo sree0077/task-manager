@@ -4,7 +4,7 @@ import axios from "axios";
 
 
 function Register(){
-  const [formData,setFormData] = useState({usernam:'',password:''});
+  const [formData,setFormData] = useState({username:'',password:''});
   const [error,setError] = useState(null);
   const navigate = useNavigate();
 

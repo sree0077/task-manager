@@ -51,7 +51,7 @@ function Dashboard(){
         <button type="submit" className="bg-green-500 text-white p-2">Add Task</button>
       </form>
       <ul className="space-y-2">
-        {tasks.map(task=>(<TaskItem key={task._id} token={token}/>))}
+        {tasks.map(task=>(<TaskItem key={task._id} task={task} token={token}/>))}
       </ul>
     </div>
   );

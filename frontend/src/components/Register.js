@@ -23,6 +23,7 @@ function Register(){
   };
 
   return(
+    
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <form onSubmit={handleSubmit} className="p-6 bg-white rounded shadow-md">
         <h2 className="text-xl mb-4">Register</h2>

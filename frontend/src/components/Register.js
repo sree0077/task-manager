@@ -35,6 +35,7 @@ function Register(){
         </button>
       </form>
     </div>
+         
   )
 }
 
